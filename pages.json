@@ -23,6 +23,9 @@
     },
     {
       "path": "pages/editMyInfo/index"
+    },
+    {
+      "path": "pages/groupDetails/index"
     }
   ],
   "tabBar": {
