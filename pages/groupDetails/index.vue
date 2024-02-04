@@ -32,7 +32,12 @@
         </div>
         <div class="attention">
           <div class="plus">
-            <svg t="1706931905336" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6691" width="200" height="200"><path d="M580.722174 437.990403 580.722174 78.171384 436.794158 78.171384 436.794158 437.990403 76.975139 437.990403 76.975139 581.918419 436.794158 581.918419 436.794158 941.737438 580.722174 941.737438 580.722174 581.918419 940.542216 581.918419 940.542216 437.990403Z" fill="#ffffff" p-id="6692"></path></svg>
+            <svg t="1706931905336" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="6691" width="200" height="200">
+              <path
+                d="M580.722174 437.990403 580.722174 78.171384 436.794158 78.171384 436.794158 437.990403 76.975139 437.990403 76.975139 581.918419 436.794158 581.918419 436.794158 941.737438 580.722174 941.737438 580.722174 581.918419 940.542216 581.918419 940.542216 437.990403Z"
+                fill="#ffffff" p-id="6692"></path>
+            </svg>
           </div>
           <div class="text">关注</div>
         </div>
@@ -40,12 +45,86 @@
 
       <div class="newStatus">最新动态</div>
 
-      <!-- <div class="applyGroups">申请加入圈子</div> -->
+      <div class="blog-item">
+        <div class="blog-avatar"></div>
+        <div class="blog-content">
+          <div class="info">
+            <div class="name">徐小胖</div>
+            <div class="time">2022-02-11 18:00:00</div>
+          </div>
+          <div class="moreAvatar">
+            <svg t="1706841688469" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="7228" id="mx_n_1706841688469" width="200" height="200">
+              <path d="M224 512m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z" fill="#000000" p-id="7229"></path>
+              <path d="M512 512m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z" fill="#000000" p-id="7230"></path>
+              <path d="M800 512m-80 0a80 80 0 1 0 160 0 80 80 0 1 0-160 0Z" fill="#000000" p-id="7231"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="blog-text">圣诞节放射科大夫很少看到发说的话房价快速的开发</div>
+      <div class="blog-picture">
+        <div class="picture"></div>
+        <div class="picture"></div>
+        <div class="picture"></div>
+        <div class="picture"></div>
+        <div class="picture"></div>
+        <div class="picture"></div>
+      </div>
+
+      <div class="operator-container">
+        <div class="like-icon">
+          <svg t="1706843042578" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="9156" width="200" height="200">
+            <path
+              d="M667.786667 117.333333C832.864 117.333333 938.666667 249.706667 938.666667 427.861333c0 138.250667-125.098667 290.506667-371.573334 461.589334a96.768 96.768 0 0 1-110.186666 0C210.432 718.368 85.333333 566.112 85.333333 427.861333 85.333333 249.706667 191.136 117.333333 356.213333 117.333333c59.616 0 100.053333 20.832 155.786667 68.096C567.744 138.176 608.170667 117.333333 667.786667 117.333333z"
+              fill="#002251" p-id="9157"></path>
+          </svg>
+
+          <div class="like-num">111</div>
+        </div>
+        <div></div>
+
+      </div>
+
+      <!-- <div class="applyGroups" @click="applyGroups()">申请加入圈子</div> -->
+
+      <div class="button-groups">
+        <div class="publish" @click="publish()">
+          <div class="icon">
+            <svg t="1707012911742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="4211" width="200" height="200">
+              <path
+                d="M863.328262 481.340895l-317.344013 0.099772L545.984249 162.816826c0-17.664722-14.336138-32.00086-32.00086-32.00086s-31.99914 14.336138-31.99914 32.00086l0 318.400215-322.368714-0.17718c-0.032684 0-0.063647 0-0.096331 0-17.632039 0-31.935493 14.239806-32.00086 31.904529-0.096331 17.664722 14.208843 32.031824 31.871845 32.095471l322.59234 0.17718 0 319.167424c0 17.695686 14.336138 32.00086 31.99914 32.00086s32.00086-14.303454 32.00086-32.00086L545.982529 545.440667l317.087703-0.099772c0.063647 0 0.096331 0 0.127295 0 17.632039 0 31.935493-14.239806 32.00086-31.904529S880.960301 481.404542 863.328262 481.340895z"
+                fill="rgba(0, 65, 196, 1)" p-id="4212"></path>
+            </svg>
+          </div>
+          <div>发表动态</div>
+        </div>
+        <div class="share" >分享圈子</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+const backTo = () => {
+  uni.navigateBack({
+    delta: 1
+  });
+}
+
+const applyGroups = () => {
+  uni.navigateTo({
+    url: '/pages/realNameAuth/index'
+  })
+}
+
+const publish = () => {
+  uni.navigateTo({
+    url: '/pages/publishActivity/index'
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -197,8 +276,153 @@
     }
 
     .applyGroups {
+      width: 100vw;
+      height: 118rpx;
       position: fixed;
       bottom: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0041C4;
+      font-size: 32rpx;
+    }
+
+    .button-groups {
+      width: 100%;
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      height: 119rpx;
+
+      .publish {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32rpx;
+        color: rgba(0, 65, 196, 1);
+        border: 1px solid #fff;
+
+        .icon {
+          width: 50rpx;
+          height: 50rpx;
+
+          svg {
+            width: 50rpx;
+            height: 50rpx;
+          }
+        }
+      }
+
+      .share {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 65, 196, 1);
+        color: #fff;
+        font-size: 32rpx;
+      }
+    }
+  }
+}
+
+.blog-item {
+  display: flex;
+
+  .blog-avatar {
+    width: 50rpx;
+    height: 50rpx;
+    background: #000;
+    border-radius: 50%;
+    margin-left: 36rpx;
+    margin-top: 38rpx;
+  }
+
+  .blog-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      .name {
+        text-align: left;
+        font-size: 28rpx;
+        margin-left: 20rpx;
+      }
+
+      .time {
+        font-size: 20rpx;
+        color: rgba(122, 134, 154, 1);
+        margin-top: 8rpx;
+        margin-left: 20rpx;
+      }
+    }
+
+    .moreAvatar {
+      margin-right: 40rpx;
+      margin-top: 16rpx;
+
+      svg {
+        width: 50rpx;
+        height: 50rpx;
+      }
+    }
+
+  }
+}
+
+.blog-text {
+  margin-left: 104rpx;
+  margin-right: 36rpx;
+  margin-top: 18rpx;
+  height: 100rpx;
+  color: rgba(0, 34, 81, 1);
+  font-size: 32rpx;
+}
+
+.blog-picture {
+  min-height: 1rpx;
+  height: auto;
+  margin-left: 94rpx;
+  margin-right: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+
+  .picture {
+    width: 184rpx;
+    height: 184rpx;
+    background: #000;
+    border-radius: 30rpx;
+    margin-left: 12rpx;
+    margin-top: 12rpx;
+  }
+}
+
+.operator-container {
+  width: 100%;
+  min-height: 1rpx;
+  height: auto;
+  display: flex;
+
+  .like-icon {
+    min-height: 1rpx;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 40rpx;
+      height: 30rpx;
+      margin-left: 104rpx;
+      margin-top: 42rpx;
+    }
+
+    .like-num {
+      margin-top: 42rpx;
+      font-size: 26rpx;
     }
   }
 }

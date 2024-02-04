@@ -1,0 +1,51 @@
+<template>
+  <div class="publish-container">
+    <div class="header">
+      <svg @click="backTo()" t="1706836365824" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" p-id="5989" width="200" height="200">
+        <path
+          d="M532.526499 904.817574L139.506311 511.797385 532.526499 118.777197c12.258185-12.258185 12.432147-32.892131-0.187265-45.51052-12.707416-12.707416-32.995485-12.703323-45.511543-0.187265L75.166957 484.739123c-7.120165 7.120165-10.163477 17.065677-8.990768 26.624381-1.500167 9.755178 1.5104 20.010753 8.990768 27.491121l411.660734 411.660734c12.258185 12.258185 32.892131 12.432147 45.511543-0.187265 12.707416-12.707416 12.7023-32.995485 0.187265-45.51052z"
+          p-id="5990"></path>
+      </svg>
+
+      <div class="text">发表动态</div>
+    </div>
+
+  </div>
+</template>
+
+<script setup>
+const backTo = () => {
+  uni.navigateBack({
+    delta: 1
+  });
+}
+</script>
+
+<style lang="scss" scoped>
+.publish-container {
+  width: 100vw;
+  height: 100vh;
+  background: #F6F7F9;
+}
+
+.header {
+  width: 100%;
+  height: 80rpx;
+  color: #000;
+  display: flex;
+  align-items: center;
+  background: #fff;
+
+  svg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+  }
+
+  .text {
+    margin-left: 240rpx;
+    font-size: 30rpx;
+  }
+}
+</style>

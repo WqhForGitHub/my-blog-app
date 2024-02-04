@@ -26,6 +26,12 @@
     },
     {
       "path": "pages/groupDetails/index"
+    },
+    {
+      "path": "pages/realNameAuth/index"
+    },
+    {
+      "path": "pages/publishActivity/index"
     }
   ],
   "tabBar": {
